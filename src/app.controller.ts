@@ -36,8 +36,13 @@ export class AppController {
     return await this.appService.invokeAsyncLibMutexService();
   }
 
-  @Get('service/redis')
+  @Get('service/redis-mutex')
   async invokeRedisMutexService(): Promise<Response> {
     return await this.appService.invokeRedisMutexService();
+  }
+
+  @Get('service/redis-semaphore')
+  async invokeRedisSemaphoreService(): Promise<Response> {
+    return await this.appService.invokeRedisSemaphoreService();
   }
 }

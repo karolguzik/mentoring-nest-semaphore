@@ -48,7 +48,6 @@ export class RedisMutexService {
 @Injectable()
 export class RedisSemaphoreService {
   private redisClient: Redis;
-  private mutex: RedisMutex;
   private semaphore: RedisSemaphore;
   constructor() {
     this.redisClient = new Redis();

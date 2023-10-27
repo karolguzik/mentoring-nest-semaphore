@@ -134,7 +134,6 @@ export class MutexRedisInterceptor implements NestInterceptor {
     let mutexAllocated: Mutex;
 
     if (MutexSet[this.mutexType]) {
-      console.log('Interceptor by redis is invoked?');
       mutexAllocated = await MutexSet[this.mutexType as MutexType.REDIS].lock();
     }
 
